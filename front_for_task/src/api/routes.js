@@ -1,0 +1,1 @@
+export const CALCULATE_CREDIT = (sumOfCredit, countOfMonthsOfCredit,percentsPerYear) => `/calculate?sumOfCredit=${sumOfCredit}&countOfMonthsOfCredit=${countOfMonthsOfCredit}&percentsPerYear=${percentsPerYear}`;
