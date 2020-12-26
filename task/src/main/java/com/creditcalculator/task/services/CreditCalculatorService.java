@@ -63,7 +63,7 @@ public class CreditCalculatorService {
         monthPayment.setAmountOfTotalPayment(paymentPerMonth);
         monthPayment.setPaymentForPercents(DoubleRounder.round(percentsForMonth,2));
         monthPayment.setPaymentForMainDebt(DoubleRounder.round(clearPaymentPerMonth,2));
-        monthPayment.setRemainsOfMainDebt(DoubleRounder.round(balanceOfDebt,2));
+        monthPayment.setRemainsOfMainDebt(balanceOfDebt < 0 ? 0 : DoubleRounder.round(balanceOfDebt,2));
 
         return monthPayment;
     }
